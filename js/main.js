@@ -137,6 +137,19 @@ const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+
+        // Honeypot check - pokud je vyplněno, je to bot
+        const honeypot = this.querySelector('input[name="_gotcha"]');
+        if (honeypot && honeypot.value) {
+            // Předstíráme úspěch, ale neposíláme
+            const fakeMsg = LanguageSwitcher.currentLang === 'cs'
+                ? 'Děkuji za zprávu! Ozvu se vám co nejdříve.'
+                : 'Thank you for your message! I will get back to you soon.';
+            alert(fakeMsg);
+            this.reset();
+            return;
+        }
+
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
 
