@@ -135,13 +135,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        const message = LanguageSwitcher.currentLang === 'cs'
-            ? 'Děkuji za zprávu! Ozvu se vám co nejdříve.'
-            : 'Thank you for your message! I will get back to you soon.';
-        alert(message);
-        this.reset();
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = LanguageSwitcher.currentLang === 'cs' ? 'Odesílám...' : 'Sending...';
+
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                const message = LanguageSwitcher.currentLang === 'cs'
+                    ? 'Děkuji za zprávu! Ozvu se vám co nejdříve.'
+                    : 'Thank you for your message! I will get back to you soon.';
+                alert(message);
+                this.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            const errorMsg = LanguageSwitcher.currentLang === 'cs'
+                ? 'Omlouvám se, něco se pokazilo. Zkuste to prosím znovu.'
+                : 'Sorry, something went wrong. Please try again.';
+            alert(errorMsg);
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
     });
 }
 

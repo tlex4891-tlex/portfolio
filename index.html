@@ -421,10 +421,10 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" data-cs-placeholder="Jméno" data-en-placeholder="Name" placeholder="Jméno" required>
-                    <input type="email" data-cs-placeholder="E-mail" data-en-placeholder="E-mail" placeholder="E-mail" required>
-                    <textarea data-cs-placeholder="Vaše zpráva" data-en-placeholder="Your message" placeholder="Vaše zpráva" rows="5" required></textarea>
+                <form class="contact-form" action="https://formspree.io/f/xaqewnyd" method="POST">
+                    <input type="text" name="name" data-cs-placeholder="Jméno" data-en-placeholder="Name" placeholder="Jméno" required>
+                    <input type="email" name="email" data-cs-placeholder="E-mail" data-en-placeholder="E-mail" placeholder="E-mail" required>
+                    <textarea name="message" data-cs-placeholder="Vaše zpráva" data-en-placeholder="Your message" placeholder="Vaše zpráva" rows="5" required></textarea>
                     <button type="submit" data-cs="Odeslat zprávu" data-en="Send Message">Odeslat zprávu</button>
                 </form>
             </div>
