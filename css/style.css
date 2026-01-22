@@ -598,3 +598,38 @@ section h2::after {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Language Switch */
+.lang-switch {
+    margin-left: 1rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.lang-current {
+    letter-spacing: 1px;
+}
+
+/* Navbar scrolled state */
+.navbar.scrolled {
+    background: rgba(15, 23, 42, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
