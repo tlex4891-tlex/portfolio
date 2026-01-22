@@ -1,6 +1,50 @@
 // Portfolio - Main JavaScript
 
 // ========================================
+// Theme Switcher (Light/Dark Mode)
+// ========================================
+
+const ThemeSwitcher = {
+    init() {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Priority: saved preference > system preference > light
+        if (savedTheme) {
+            this.setTheme(savedTheme);
+        } else if (prefersDark) {
+            this.setTheme('dark');
+        } else {
+            this.setTheme('light');
+        }
+
+        // Event listener for toggle button
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => this.toggle());
+        }
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('portfolio-theme')) {
+                this.setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    },
+
+    setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+    },
+
+    toggle() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        this.setTheme(newTheme);
+    }
+};
+
+// ========================================
 // Language Switching
 // ========================================
 
@@ -8,23 +52,18 @@ const LanguageSwitcher = {
     currentLang: 'cs',
 
     init() {
-        // Detekce jazyka prohlížeče
         const browserLang = navigator.language || navigator.userLanguage;
         const savedLang = localStorage.getItem('portfolio-lang');
 
-        // Priorita: 1. Uložená preference, 2. Jazyk prohlížeče, 3. Výchozí CS
         if (savedLang) {
             this.currentLang = savedLang;
         } else if (!browserLang.toLowerCase().startsWith('cs')) {
-            // Pokud jazyk prohlížeče není čeština, použij angličtinu
             this.currentLang = 'en';
         }
 
-        // Aplikuj jazyk
         this.applyLanguage(this.currentLang);
         this.updateToggleButton();
 
-        // Event listener pro přepínač
         const toggleBtn = document.getElementById('lang-toggle');
         if (toggleBtn) {
             toggleBtn.addEventListener('click', () => this.toggle());
@@ -39,10 +78,8 @@ const LanguageSwitcher = {
     },
 
     applyLanguage(lang) {
-        // Aktualizuj HTML lang atribut
         document.documentElement.lang = lang;
 
-        // Aktualizuj všechny elementy s data-cs a data-en atributy
         const elements = document.querySelectorAll('[data-cs][data-en]');
         elements.forEach(el => {
             const text = el.getAttribute(`data-${lang}`);
@@ -51,7 +88,6 @@ const LanguageSwitcher = {
             }
         });
 
-        // Aktualizuj placeholdery ve formulářích
         const placeholderElements = document.querySelectorAll('[data-cs-placeholder][data-en-placeholder]');
         placeholderElements.forEach(el => {
             const placeholder = el.getAttribute(`data-${lang}-placeholder`);
@@ -59,13 +95,6 @@ const LanguageSwitcher = {
                 el.placeholder = placeholder;
             }
         });
-
-        // Aktualizuj title stránky
-        if (lang === 'en') {
-            document.title = 'Tomáš Alex | Business Consultant & Project Manager';
-        } else {
-            document.title = 'Tomáš Alex | Business Consultant & Project Manager';
-        }
     },
 
     updateToggleButton() {
@@ -90,7 +119,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
+            const navHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = target.offsetTop - navHeight;
+            window.scrollTo({
+                top: targetPosition,
                 behavior: 'smooth'
             });
         }
@@ -106,8 +138,8 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const message = LanguageSwitcher.currentLang === 'cs'
-            ? 'Formulář odeslán! (Demo)'
-            : 'Form submitted! (Demo)';
+            ? 'Děkuji za zprávu! Ozvu se vám co nejdříve.'
+            : 'Thank you for your message! I will get back to you soon.';
         alert(message);
         this.reset();
     });
@@ -130,13 +162,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('section').forEach(section => {
-    section.classList.add('fade-in');
-    observer.observe(section);
+document.querySelectorAll('section, .project-card, .skill-card, .hobby-item, .timeline-content').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
 });
 
 // ========================================
-// Navbar Background on Scroll
+// Navbar Scroll Effect
 // ========================================
 
 const navbar = document.querySelector('.navbar');
@@ -155,9 +187,60 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================================
+// Parallax Effect
+// ========================================
+
+const parallaxSections = document.querySelectorAll('.parallax-section');
+
+function updateParallax() {
+    parallaxSections.forEach(section => {
+        const scrolled = window.pageYOffset;
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrolled > sectionTop - window.innerHeight && scrolled < sectionTop + sectionHeight) {
+            const yPos = (scrolled - sectionTop) * 0.3;
+            section.style.backgroundPositionY = `${yPos}px`;
+        }
+    });
+}
+
+window.addEventListener('scroll', updateParallax);
+
+// ========================================
+// Active Navigation Link
+// ========================================
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+function updateActiveNav() {
+    const scrollPos = window.pageYOffset + 100;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+
+// ========================================
 // Initialize
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    ThemeSwitcher.init();
     LanguageSwitcher.init();
+    updateActiveNav();
 });
