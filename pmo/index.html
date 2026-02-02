@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-cs="Projektová Kancelář | PMO Strategie" data-en="Project Management Office | PMO Strategy">Projektová Kancelář | PMO Strategie</title>
+    <meta name="description" content="Strategické nastavení PMO pro dosažení firemních cílů. Metodiky P3O, IPMA OCB, TOGAF.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="pmo-style.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-28DTM9Q3TZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-28DTM9Q3TZ');
+    </script>
+</head>
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <a href="../" class="nav-brand">Tom Alex</a>
+        <ul class="nav-links">
+            <li><a href="#executive-summary" data-cs="Shrnutí" data-en="Summary">Shrnutí</a></li>
+            <li><a href="#methodology" data-cs="Metodika" data-en="Methodology">Metodika</a></li>
+            <li><a href="#competencies" data-cs="Kompetence" data-en="Competencies">Kompetence</a></li>
+            <li><a href="#roadmap" data-cs="Roadmapa" data-en="Roadmap">Roadmapa</a></li>
+            <li><a href="#results" data-cs="Výsledky" data-en="Results">Výsledky</a></li>
+            <li class="nav-controls">
+                <button id="theme-toggle" class="theme-btn" title="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <button id="lang-toggle" class="lang-btn" title="Switch language">
+                    <span class="lang-current">CS</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero sekce -->
+    <section id="hero" class="hero pmo-hero">
+        <div class="hero-content">
+            <h1 class="hero-name" data-cs="Projektová <span class='highlight'>Kancelář</span>" data-en="Project Management <span class='highlight'>Office</span>">Projektová <span class="highlight">Kancelář</span></h1>
+            <p class="hero-description" data-cs="Strategické nastavení PMO pro dosažení firemních cílů" data-en="Strategic PMO setup to achieve business objectives">Strategické nastavení PMO pro dosažení firemních cílů</p>
+            <div class="methodology-badges">
+                <span class="badge">P3O</span>
+                <span class="badge">IPMA OCB</span>
+                <span class="badge">TOGAF</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-cs="Scrolluj dolů" data-en="Scroll down">Scrolluj dolů</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="executive-summary" class="about">
+        <div class="container">
+            <h2>Executive Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-card challenge">
+                    <div class="summary-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <h3 data-cs="Výzva" data-en="Challenge">Výzva</h3>
+                    <p data-cs="Firma potřebuje jednotný systém pro řízení projektů, který propojí strategii s realizací a zajistí efektivní spolupráci napříč odděleními." data-en="The company needs a unified project management system that connects strategy with execution and ensures effective cross-departmental collaboration.">Firma potřebuje jednotný systém pro řízení projektů, který propojí strategii s realizací a zajistí efektivní spolupráci napříč odděleními.</p>
+                </div>
+                <div class="summary-card solution">
+                    <div class="summary-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"></path><path d="M9 21h6"></path><path d="M9 18h6"></path></svg>
+                    </div>
+                    <h3 data-cs="Řešení" data-en="Solution">Řešení</h3>
+                    <p data-cs="Vytvoření projektové kanceláře (PMO) postavené na osvědčených metodikách P3O, IPMA OCB a TOGAF, která zajistí kontrolu, rozvoj kompetencí a architektonickou konzistenci." data-en="Establishing a Project Management Office (PMO) built on proven methodologies P3O, IPMA OCB, and TOGAF to ensure control, competency development, and architectural consistency.">Vytvoření projektové kanceláře (PMO) postavené na osvědčených metodikách P3O, IPMA OCB a TOGAF, která zajistí kontrolu, rozvoj kompetencí a architektonickou konzistenci.</p>
+                </div>
+            </div>
+            <div class="benefits-box">
+                <h3 data-cs="Klíčové přínosy" data-en="Key Benefits">Klíčové přínosy</h3>
+                <ul class="benefits-list">
+                    <li data-cs="Soulad portfolia se strategií" data-en="Portfolio alignment with strategy">Soulad portfolia se strategií</li>
+                    <li data-cs="Optimalizace využití zdrojů napříč projekty" data-en="Optimized resource utilization across projects">Optimalizace využití zdrojů napříč projekty</li>
+                    <li data-cs="Standardizace procesů a zlepšení prediktability" data-en="Process standardization and improved predictability">Standardizace procesů a zlepšení prediktability</li>
+                    <li data-cs="Rozvoj projektových kompetencí v organizaci" data-en="Development of project competencies within the organization">Rozvoj projektových kompetencí v organizaci</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodický rámec -->
+    <section id="methodology" class="skills">
+        <div class="container">
+            <h2 data-cs="Metodický rámec: Tři pilíře PMO" data-en="Methodological Framework: Three Pillars of PMO">Metodický rámec: Tři pilíře PMO</h2>
+            <div class="skills-cards pillars-grid">
+                <div class="skill-card pillar-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    </div>
+                    <h3>P3O (PRINCE2)</h3>
+                    <p class="pillar-subtitle" data-cs="Procesní řízení" data-en="Process Management">Procesní řízení</p>
+                    <ul>
+                        <li data-cs="Definované role a odpovědnosti" data-en="Defined roles and responsibilities">Definované role a odpovědnosti</li>
+                        <li data-cs="7 procesů pro životní cyklus" data-en="7 processes for the lifecycle">7 procesů pro životní cyklus</li>
+                        <li data-cs="Řízení podle výjimek" data-en="Management by exception">Řízení podle výjimek</li>
+                        <li data-cs="Finanční kontrola (Business Case)" data-en="Financial control (Business Case)">Finanční kontrola (Business Case)</li>
+                    </ul>
+                </div>
+                <div class="skill-card pillar-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>IPMA OCB</h3>
+                    <p class="pillar-subtitle" data-cs="Organizační kompetence" data-en="Organizational Competencies">Organizační kompetence</p>
+                    <ul>
+                        <li data-cs="Rozvoj lidských dovedností" data-en="Human skills development">Rozvoj lidských dovedností</li>
+                        <li data-cs="Organizační zralost" data-en="Organizational maturity">Organizační zralost</li>
+                        <li data-cs="Soft skills a vedení týmů" data-en="Soft skills and team leadership">Soft skills a vedení týmů</li>
+                        <li data-cs="Kultura učení a růstu" data-en="Culture of learning and growth">Kultura učení a růstu</li>
+                    </ul>
+                </div>
+                <div class="skill-card pillar-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><line x1="10" y1="6.5" x2="14" y2="6.5"></line><line x1="6.5" y1="10" x2="6.5" y2="14"></line><line x1="17.5" y1="10" x2="17.5" y2="14"></line></svg>
+                    </div>
+                    <h3>TOGAF</h3>
+                    <p class="pillar-subtitle" data-cs="Enterprise architektura" data-en="Enterprise Architecture">Enterprise architektura</p>
+                    <ul>
+                        <li data-cs="Strategické propojení" data-en="Strategic alignment">Strategické propojení</li>
+                        <li data-cs="Technologická konzistence" data-en="Technological consistency">Technologická konzistence</li>
+                        <li data-cs="Architektonická vize" data-en="Architectural vision">Architektonická vize</li>
+                        <li data-cs="Dlouhodobá udržitelnost" data-en="Long-term sustainability">Dlouhodobá udržitelnost</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Klíčové kompetence PMO -->
+    <section id="competencies" class="projects">
+        <div class="container">
+            <h2 data-cs="Klíčové kompetence PMO" data-en="Key PMO Competencies">Klíčové kompetence PMO</h2>
+            <div class="competencies-grid">
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <h3 data-cs="Strategické řízení" data-en="Strategic Management">Strategické řízení</h3>
+                    <p data-cs="Zajištění souladu projektů se strategií firmy a business cíli" data-en="Ensuring project alignment with company strategy and business goals">Zajištění souladu projektů se strategií firmy a business cíli</p>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 data-cs="Governance a řízení rizik" data-en="Governance &amp; Risk Management">Governance a řízení rizik</h3>
+                    <p data-cs="Řízení rizik a governance napříč celým portfoliem projektů" data-en="Risk management and governance across the entire project portfolio">Řízení rizik a governance napříč celým portfoliem projektů</p>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <h3 data-cs="Reporting a analytika" data-en="Reporting &amp; Analytics">Reporting a analytika</h3>
+                    <p data-cs="Komplexní reporting pro vedení a stakeholdery s metrikami" data-en="Comprehensive reporting for management and stakeholders with metrics">Komplexní reporting pro vedení a stakeholdery s metrikami</p>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    </div>
+                    <h3 data-cs="Metodická podpora" data-en="Methodological Support">Metodická podpora</h3>
+                    <p data-cs="Standardizace procesů a metodická podpora projektových týmů" data-en="Process standardization and methodological support for project teams">Standardizace procesů a metodická podpora projektových týmů</p>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3 data-cs="Rozvoj kompetencí" data-en="Competency Development">Rozvoj kompetencí</h3>
+                    <p data-cs="Vzdělávání a rozvoj projektových manažerů v organizaci" data-en="Training and development of project managers within the organization">Vzdělávání a rozvoj projektových manažerů v organizaci</p>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    </div>
+                    <h3 data-cs="Portfolio management" data-en="Portfolio Management">Portfolio management</h3>
+                    <p data-cs="Prioritizace a optimalizace portfolia podle ROI a strategické hodnoty" data-en="Portfolio prioritization and optimization based on ROI and strategic value">Prioritizace a optimalizace portfolia podle ROI a strategické hodnoty</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementační Roadmap -->
+    <section id="roadmap" class="experience">
+        <div class="container">
+            <h2 data-cs="Implementační roadmapa" data-en="Implementation Roadmap">Implementační roadmapa</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">
+                        <span class="phase-number">1</span>
+                        <span class="phase-weeks" data-cs="Týdny 1-4" data-en="Weeks 1-4">Týdny 1-4</span>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3 data-cs="Založení" data-en="Foundation">Založení</h3>
+                        <p data-cs="Definice strategického záměru PMO • Jmenování PMO Managera a týmu • Workshop s vedením firmy" data-en="Definition of PMO strategic intent • Appointment of PMO Manager and team • Workshop with company leadership">Definice strategického záměru PMO • Jmenování PMO Managera a týmu • Workshop s vedením firmy</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">
+                        <span class="phase-number">2</span>
+                        <span class="phase-weeks" data-cs="Týdny 5-8" data-en="Weeks 5-8">Týdny 5-8</span>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3 data-cs="Standardizace" data-en="Standardization">Standardizace</h3>
+                        <p data-cs="Vytvoření metodického manuálu • Nastavení procesů a šablon • Definice finančních tolerancí" data-en="Creation of methodological manual • Process and template setup • Definition of financial tolerances">Vytvoření metodického manuálu • Nastavení procesů a šablon • Definice finančních tolerancí</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">
+                        <span class="phase-number">3</span>
+                        <span class="phase-weeks" data-cs="Týdny 9-12" data-en="Weeks 9-12">Týdny 9-12</span>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3 data-cs="Integrace" data-en="Integration">Integrace</h3>
+                        <p data-cs="Propojení s vývojem • Nastavení vazeb na obchod • Integrace s TOGAF EA týmem" data-en="Connection with development • Establishing business links • Integration with TOGAF EA team">Propojení s vývojem • Nastavení vazeb na obchod • Integrace s TOGAF EA týmem</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">
+                        <span class="phase-number">4</span>
+                        <span class="phase-weeks" data-cs="Týdny 13+" data-en="Weeks 13+">Týdny 13+</span>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3 data-cs="Optimalizace" data-en="Optimization">Optimalizace</h3>
+                        <p data-cs="Hodnocení efektivity PMO • Kontinuální zlepšování • Rozvoj kompetencí (IPMA)" data-en="PMO effectiveness evaluation • Continuous improvement • Competency development (IPMA)">Hodnocení efektivity PMO • Kontinuální zlepšování • Rozvoj kompetencí (IPMA)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Wins -->
+    <section id="quickwins" class="about">
+        <div class="container">
+            <h2 data-cs="Quick Wins: Prvních 90 dní" data-en="Quick Wins: First 90 Days">Quick Wins: Prvních 90 dní</h2>
+            <div class="quickwins-grid">
+                <div class="quickwin-card">
+                    <div class="quickwin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                    </div>
+                    <h3 data-cs="Transparentní Portfolio Dashboard" data-en="Transparent Portfolio Dashboard">Transparentní Portfolio Dashboard</h3>
+                    <p data-cs="Viditelnost všech projektů, jejich stavu a zdraví" data-en="Visibility of all projects, their status and health">Viditelnost všech projektů, jejich stavu a zdraví</p>
+                    <div class="quickwin-metric positive">
+                        <span data-cs="40% lepší rozhodování vedení" data-en="40% better management decisions">40% lepší rozhodování vedení</span>
+                    </div>
+                </div>
+                <div class="quickwin-card">
+                    <div class="quickwin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3 data-cs="Standardizované šablony" data-en="Standardized Templates">Standardizované šablony</h3>
+                    <p data-cs="Jednotné dokumenty pro všechny projekty" data-en="Unified documents for all projects">Jednotné dokumenty pro všechny projekty</p>
+                    <div class="quickwin-metric negative">
+                        <span data-cs="30% méně času na administrativu" data-en="30% less time on administration">30% méně času na administrativu</span>
+                    </div>
+                </div>
+                <div class="quickwin-card">
+                    <div class="quickwin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3 data-cs="Pravidelné Portfolio Reviews" data-en="Regular Portfolio Reviews">Pravidelné Portfolio Reviews</h3>
+                    <p data-cs="Měsíční setkání stakeholderů s PMO" data-en="Monthly stakeholder meetings with PMO">Měsíční setkání stakeholderů s PMO</p>
+                    <div class="quickwin-metric positive">
+                        <span data-cs="50% rychlejší identifikace rizik" data-en="50% faster risk identification">50% rychlejší identifikace rizik</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Očekávané výsledky -->
+    <section id="results" class="skills">
+        <div class="container">
+            <h2 data-cs="Očekávané výsledky" data-en="Expected Results">Očekávané výsledky</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <span class="result-number">85%</span>
+                    <span class="result-label" data-cs="Úspěšnost projektů v čase a rozpočtu" data-en="Project success rate on time and budget">Úspěšnost projektů v čase a rozpočtu</span>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon growth">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                    </div>
+                    <span class="result-number">+35%</span>
+                    <span class="result-label" data-cs="ROI portfolia projektů" data-en="Project portfolio ROI">ROI portfolia projektů</span>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon efficiency">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </div>
+                    <span class="result-number">-50%</span>
+                    <span class="result-label" data-cs="Duplicitní práce týmů" data-en="Duplicate team work">Duplicitní práce týmů</span>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon alignment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <span class="result-number">100%</span>
+                    <span class="result-label" data-cs="Soulad se strategií a EA" data-en="Alignment with strategy and EA">Soulad se strategií a EA</span>
+                </div>
+            </div>
+            <div class="study-note">
+                <p data-cs="Nezávislé studie ukazují, že firmy s efektivním PMO dosahují o 38% vyšší úspěšnosti projektů." data-en="Independent studies show that companies with an effective PMO achieve 38% higher project success rates.">Nezávislé studie ukazují, že firmy s efektivním PMO dosahují o 38% vyšší úspěšnosti projektů.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Akční kroky -->
+    <section id="actions" class="projects">
+        <div class="container">
+            <h2 data-cs="Akční kroky vedoucího PMO" data-en="PMO Leader Action Steps">Akční kroky vedoucího PMO</h2>
+            <div class="actions-list">
+                <div class="action-item">
+                    <span class="action-number">1</span>
+                    <div class="action-content">
+                        <h3 data-cs="Sestavení PMO týmu" data-en="Building the PMO Team">Sestavení PMO týmu</h3>
+                        <p data-cs="Identifikace a jmenování klíčových rolí (Portfolio Manager, Project Support). Definice odpovědností a kompetencí." data-en="Identification and appointment of key roles (Portfolio Manager, Project Support). Definition of responsibilities and competencies.">Identifikace a jmenování klíčových rolí (Portfolio Manager, Project Support). Definice odpovědností a kompetencí.</p>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <span class="action-number">2</span>
+                    <div class="action-content">
+                        <h3 data-cs="Workshop s vedením" data-en="Leadership Workshop">Workshop s vedením</h3>
+                        <p data-cs="Facilitace strategického workshopu pro sladění PMO s firemními cíli. Získání buy-in od stakeholderů." data-en="Facilitation of strategic workshop to align PMO with company goals. Obtaining stakeholder buy-in.">Facilitace strategického workshopu pro sladění PMO s firemními cíli. Získání buy-in od stakeholderů.</p>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <span class="action-number">3</span>
+                    <div class="action-content">
+                        <h3 data-cs="Vytvoření metodického rámce" data-en="Creating Methodological Framework">Vytvoření metodického rámce</h3>
+                        <p data-cs="Vypracování standardních šablon, procesních map a projektového manuálu. Definice finančních tolerancí." data-en="Development of standard templates, process maps, and project manual. Definition of financial tolerances.">Vypracování standardních šablon, procesních map a projektového manuálu. Definice finančních tolerancí.</p>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <span class="action-number">4</span>
+                    <div class="action-content">
+                        <h3 data-cs="Nastavení portfolio dashboardu" data-en="Portfolio Dashboard Setup">Nastavení portfolio dashboardu</h3>
+                        <p data-cs="Implementace nástroje pro transparentní reporting a sledování zdraví všech projektů v portfoliu." data-en="Implementation of a tool for transparent reporting and tracking the health of all portfolio projects.">Implementace nástroje pro transparentní reporting a sledování zdraví všech projektů v portfoliu.</p>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <span class="action-number">5</span>
+                    <div class="action-content">
+                        <h3 data-cs="Zahájení integrace s týmy" data-en="Initiating Team Integration">Zahájení integrace s týmy</h3>
+                        <p data-cs="Navázání spolupráce s vývojem, obchodem, operations a EA týmem. První portfolio review meeting." data-en="Establishing collaboration with development, sales, operations, and EA teams. First portfolio review meeting.">Navázání spolupráce s vývojem, obchodem, operations a EA týmem. První portfolio review meeting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Závěr -->
+    <section id="closing" class="hero pmo-closing">
+        <div class="hero-content">
+            <h2 data-cs="Děkuji za pozornost" data-en="Thank You">Děkuji za pozornost</h2>
+            <p class="hero-description" data-cs="Jsem připraven diskutovat detaily a odpovědět na vaše otázky" data-en="I am ready to discuss details and answer your questions">Jsem připraven diskutovat detaily a odpovědět na vaše otázky</p>
+            <div class="hero-buttons">
+                <a href="../#contact" class="cta-button" data-cs="Kontaktovat" data-en="Contact Me">Kontaktovat</a>
+                <a href="../" class="cta-button secondary" data-cs="Zpět na portfolio" data-en="Back to Portfolio">Zpět na portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-cs="© 2025 Tom Alex. Všechna práva vyhrazena." data-en="© 2025 Tom Alex. All rights reserved.">© 2025 Tom Alex. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script src="pmo-script.js"></script>
+</body>
+</html>

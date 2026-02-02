@@ -16,11 +16,15 @@ Osobní portfolio website pro Tomáše Alexe - Business Consultant & Project Man
 ## Struktura souborů
 ```
 /home/tomas/portfolio/
-├── index.html      # Hlavní HTML s veškerým obsahem
-├── css/style.css   # Styly, light/dark theme, responsive
-├── js/main.js      # Interaktivita, přepínání jazyků/témat
-├── CNAME           # Custom doména (tomasalex.com)
-└── CLAUDE.md       # Tento soubor
+├── index.html          # Hlavní HTML s veškerým obsahem
+├── css/style.css       # Styly, light/dark theme, responsive
+├── js/main.js          # Interaktivita, přepínání jazyků/témat
+├── pmo/                # PMO prezentace (tomasalex.com/pmo/)
+│   ├── index.html      # PMO stránka
+│   ├── pmo-style.css   # PMO-specifické styly
+│   └── pmo-script.js   # PMO JavaScript
+├── CNAME               # Custom doména (tomasalex.com)
+└── CLAUDE.md           # Tento soubor
 ```
 
 ## Klíčové funkce

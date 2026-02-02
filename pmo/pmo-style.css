@@ -1,0 +1,470 @@
+/* PMO Prezentace - Specifické styly */
+
+/* Active Nav Link */
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* Hero pro PMO */
+.pmo-hero {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.pmo-hero .hero-name {
+    font-size: 4rem;
+}
+
+.methodology-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Executive Summary */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.summary-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    text-align: center;
+}
+
+.summary-icon {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.summary-card h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.summary-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Benefits Box */
+.benefits-box {
+    background: var(--bg-card);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    border: 2px solid var(--primary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.benefits-box h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.benefits-list li {
+    color: var(--text-secondary);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Pillars Grid */
+.pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pillar-card {
+    text-align: center;
+}
+
+.pillar-subtitle {
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.pillar-card ul {
+    text-align: left;
+}
+
+/* Competencies Grid */
+.competencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.competency-card {
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.competency-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px var(--shadow);
+}
+
+.competency-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.competency-card h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.competency-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Roadmap Timeline */
+.roadmap-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.roadmap-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: stretch;
+}
+
+.roadmap-phase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.phase-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.phase-weeks {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.roadmap-content {
+    flex: 1;
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.roadmap-content h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-content p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Quick Wins */
+.quickwins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.quickwin-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.quickwin-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px var(--shadow);
+}
+
+.quickwin-icon {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.quickwin-card h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quickwin-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.quickwin-metric {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.quickwin-metric.positive {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.quickwin-metric.negative {
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--primary);
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.result-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px var(--shadow);
+}
+
+.result-icon {
+    margin-bottom: 1rem;
+}
+
+.result-icon.success {
+    color: #10b981;
+}
+
+.result-icon.growth {
+    color: var(--primary);
+}
+
+.result-icon.efficiency {
+    color: #f59e0b;
+}
+
+.result-icon.alignment {
+    color: #8b5cf6;
+}
+
+.result-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.study-note {
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.study-note p {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
+/* Action Steps */
+.actions-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.action-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.action-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.action-content {
+    flex: 1;
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.action-content h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.action-content p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Closing Section */
+.pmo-closing {
+    min-height: 60vh;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.pmo-closing h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pmo-closing h2::after {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pmo-hero .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .roadmap-phase {
+        flex-direction: row;
+        gap: 1rem;
+        min-width: auto;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .competency-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .action-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .benefits-box {
+        padding: 1.5rem;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .pmo-closing h2 {
+        font-size: 2rem;
+    }
+}
