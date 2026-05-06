@@ -319,6 +319,11 @@
     color: var(--primary);
 }
 
+.quickwin-metric.strategic {
+    background: rgba(139, 92, 246, 0.15);
+    color: #8b5cf6;
+}
+
 /* Results Grid */
 .results-grid {
     display: grid;
